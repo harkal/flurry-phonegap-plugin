@@ -2,7 +2,7 @@
 <plugin
 	xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="com.phonegap.plugins.Flurry"
+	id="com.phonegap.plugins.flurry"
 	version="3.3.6">
 	<name>Flurry</name>
 	<description>Cordova/Phonegap plugin for Flurry mobile analytics</description>
@@ -27,6 +27,8 @@
 		<header-file src="src/ios/Flurry.h" />
 		<header-file src="src/ios/FlurryPlugin.h" />
 		<source-file src="src/ios/FlurryPlugin.m" />
+		<source-file src="src/ios/libFlurry_6.2.0.a" framework="true" />
+        <source-file src="src/ios/libFlurryAds_6.2.0.a" framework="true" />
 		<framework src="SystemConfiguration.framework" />
 		<framework src="CFNetwork.framework" />
 		<framework src="Security.framework" />
@@ -35,12 +37,14 @@
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="FlurryPlugin">
-				<param name="android-package" value="com.phonegap.plugins.Flurry" />
+				<param name="android-package" value="com.phonegap.plugins.flurry.Flurry" />
 			</feature>
 		</config-file>
 
 		<source-file src="src/android/Flurry.java"
 					target-dir="src/com/phonegap/plugins/flurry/" />
+		<source-file src="src/android/FlurryAds-5.3.0.jar" target-dir="libs" />
+        <source-file src="src/android/FlurryAnalytics-5.3.0.jar" target-dir="libs" />
 		<dependency id="com.google.playservices" />
 		<dependency id="android.support.v4" />
 		<config-file target="AndroidManifest.xml" parent="/*/application">

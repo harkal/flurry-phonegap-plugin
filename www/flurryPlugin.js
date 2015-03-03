@@ -58,6 +58,10 @@
   // End of functions that must be called before Flurry session starts
 
   // key is a string
+  Flurry.prototype.init = function(key,successCallback,failureCallback) {
+    return cordova.exec(successCallback, failureCallback, 'FlurryPlugin', 'init', [key]);
+  };
+
   Flurry.prototype.startSession = function(key,successCallback,failureCallback) {
     return cordova.exec(successCallback, failureCallback, 'FlurryPlugin', 'startSession', [key]);
   };
