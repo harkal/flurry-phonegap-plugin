@@ -29,9 +29,17 @@
 		<source-file src="src/ios/FlurryPlugin.m" />
 		<source-file src="src/ios/libFlurry_6.2.0.a" framework="true" />
         <source-file src="src/ios/libFlurryAds_6.2.0.a" framework="true" />
-		<framework src="SystemConfiguration.framework" />
 		<framework src="CFNetwork.framework" />
-		<framework src="Security.framework" />
+		<framework src="AdSupport.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="MediaPlayer.framework" />
+        <framework src="Security.framework" />
+        <framework src="StoreKit.framework" />
+        <framework src="MessageUI.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="libz.dylib" />
 	</platform>
 
 	<platform name="android">
